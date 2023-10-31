@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <div class="banner">
+    <form class="ban" onsubmit="return my_function()">
+        <h2> Registration Form</h2>
+        <input type="text" placeholder="Name*" id="name1" >
+        <span id="num1" style="color: red;"></span><br><br>
+        <input type="text" placeholder="Email*" id="email" ><br><br>
+        <span id="num2" style="color: red;"></span>
+        <input type="number" placeholder="Phone*" id="phone" >
+        <span id="num3" style="color: red;"></span><br><br>
+        <input type="text" placeholder="subject*" id="sub"><br><br>
+        <input type="password" Placeholder="Password*" id="password" >
+        <span id="num4" style="color: red;"></span><br><br>
+        <input type="submit" value="submit" id="btn">
+        </form>
+        </div>
+
+        <script>
+            function my_function1(email){
+                let emailRegex=/^[a-zA-Z0-9-_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+                return emailRegex.test(email);
+            }
+            function my_function3(password){
+                let passwordRegex=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/;
+                return passwordRegex.test(password);
+            }
+
+            function my_function(){
+                let a=document.getElementById("email").value;
+                let b=document.getElementById('password').value;
+                if(my_function1(a)){
+                    return true;
+                }
+                else if(my_function3(b)){
+                    return true;
+                }
+                
+                else{
+                    document.getElementById('num2').innerHTML="Please enter the correct Email Id";
+
+                    document.getElementById('num4').innerHTML="Password should contain 8 characters";
+                    return false;
+                }
+            }
+            
+
+          
+        </script>
+
+
+    </form>
+</body>
+</html>

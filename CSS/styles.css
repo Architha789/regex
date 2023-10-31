@@ -1,0 +1,42 @@
+*{
+    padding: 0; 
+    margin: 0;
+ }
+ body{
+     background-color: rgb(10, 133, 133);
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ 
+ }
+ .banner{
+      
+     border: 25px solid;
+     border-radius: 20px;
+     text-align: center;
+     margin: 10%;
+ }
+ .ban{
+     display: block;
+     width: 300px;
+     
+     background-color: #fff;
+     padding: 50px 25px;
+     color: black;
+ }
+ h2{
+     padding: 5px 10px 15px 10px ;
+     font-size: 30px;
+ }
+ #name1,#email,#phone,#password,#sub{
+     background-color: rgb(211, 199, 199);
+     width: 250px;
+     height: 20px;
+ }
+ #btn{
+     padding: 10px 15px;
+     background-color: rgb(17, 62, 121);
+     color: #fff;
+ }
+ 
+ 
